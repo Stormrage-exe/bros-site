@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,50 +12,55 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
- 
 }
 
 .wrapper {
-    width: 1100px; 
-    height: 750px; 
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    overflow: hidden;
+    width: 1100px;
+    display: flex;
+    gap: 20px; 
+}
+
+.center-content {
     display: flex;
     flex-direction: column;
-
+    width: 800px; /* nav + main width */
 }
 
 nav {
     background-color: pink;
     padding: 15px 20px;
-    height: 100px; 
+    height: 100px;
     display: flex;
     align-items: center;
+    border-radius: 10px 10px 0 0;
+    border: 2.5px solid palevioletred;
 }
 
 .logo {
     color: white;
     font-weight: bold;
+    
 }
 
-
-
-.container {
-    display: flex;
-    flex: 1;
-    border: 3px solid palevioletred;
-  
+.main-content {
+    height: 650px; 
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border: 2px solid palevioletred;
 }
 
-.sidebar {
+.right-sidebar {
+    border: 2.4px solid palevioletred;
     width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid black;
+    height: 750px; 
 }
 
 .sidebar-section {
@@ -63,19 +68,11 @@ nav {
     background-color: pink;
     border-radius: 5px;
     transition: transform 0.3s ease;
-    border: 1px solid black;
+    border: 2px solid palevioletred;
 }
 
 .sidebar-section:hover {
     transform: scale(1.02);
 }
 
-.main-content {
-    width: 900px;
-    background-color: white;
-    
-}
-
-/* Start https://www.cursors-4u.com */ * 
-{cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat1011.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat1011.gif), auto !important;} 
-/* End https://www.cursors-4u.com */
+* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat1011.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat1011.gif), auto !important;}
