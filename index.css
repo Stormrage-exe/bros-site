@@ -11,26 +11,25 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
+    overflow-x: auto;
 }
 
 .wrapper {
-    width: 900px;
-    height: 700px;
+    width: 1300px;
+    height: 800px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 }
 
 nav {
     background-color: pink;
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
 }
 
 .logo {
@@ -38,43 +37,27 @@ nav {
     font-weight: bold;
 }
 
-
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    width: 20px;
-    height: 20px;
-    background-color: #34495e;
-    display: block;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.nav-links a:hover {
-    transform: translateY(-3px);
-}
-
 .container {
     display: flex;
     flex: 1;
-    border:3px solid palevioletred;
+    border: 3px solid palevioletred;
 }
 
 .sidebar {
-    width: 200px;
-    padding: 15px;
+    width: 250px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     border: 1px solid black;
 }
 
 .sidebar-section {
     flex: 1;
-    background-color: #ecf0f1;
+    background-color: pink;
     border-radius: 5px;
     transition: transform 0.3s ease;
+    border: 1px solid black;
 }
 
 .sidebar-section:hover {
@@ -84,34 +67,6 @@ nav {
 .main-content {
     flex: 1;
     background-color: white;
+    min-width: 580px;
 }
 
-.left-sidebar .sidebar-section:nth-child(1) {
-    background-color: pink;
-    border: 1px solid black;
-}
-
-.left-sidebar .sidebar-section:nth-child(2) {
-    background-color: pink;
-    border: 1px solid black;
-}
-
-.left-sidebar .sidebar-section:nth-child(3) {
-    background-color: pink;
-    border: 1px solid black;
-}
-
-.right-sidebar .sidebar-section:nth-child(1) {
-    background-color:  pink;
-    border: 1px solid black;
-}
-
-.right-sidebar .sidebar-section:nth-child(2) {
-    background-color: pink;
-    border: 1px solid black;
-}
-
-.right-sidebar .sidebar-section:nth-child(3) {
-    background-color: pink;
-    border: 1px solid black;
-}
