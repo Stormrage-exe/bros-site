@@ -29,7 +29,7 @@ body {
 nav {
     background-color: pink;
     padding: 15px 20px;
-    height: 100px;
+    height: 70px;
     display: flex;
     align-items: center;
     border-radius: 10px 10px 0 0;
