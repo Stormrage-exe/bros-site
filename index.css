@@ -71,6 +71,10 @@ nav {
     border: 2px solid palevioletred;
 }
 
+.fuckass{
+    margin-left: -230px; 
+}
+
 .sidebar-section:hover {
     transform: scale(1.02);
 }
