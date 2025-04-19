@@ -27,7 +27,7 @@ body {
 }
 
 nav {
-    background-color: pink;
+    background-color: #ffbfd5;
     padding: 15px 20px;
     height: 70px;
     display: flex;
@@ -65,7 +65,7 @@ nav {
 
 .sidebar-section {
     flex: 1;
-    background-color: pink;
+    background-color: #ffbfd5;
     border-radius: 5px;
     transition: transform 0.3s ease;
     border: 2px solid palevioletred;
