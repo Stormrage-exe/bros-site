@@ -12,6 +12,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+      position: relative;
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ nav {
 .logo {
     color: white;
     font-weight: bold;
-    
+
 }
 
 .main-content {
@@ -72,7 +73,7 @@ nav {
     z-index: 1;
 }
 
-.fuckass{
+.fuckass{ 
     padding-right:-20px;
     margin-left: -230px; 
     width:460px;
@@ -91,4 +92,4 @@ nav {
     transform: scale(1.02);
 }
 
-* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat1011.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat1011.gif), auto !important;}
+{cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat1011.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat1011.gif), auto !important;}
