@@ -169,14 +169,72 @@ nav {
     content: " ▶";
 
 }
+.toggle-content h4 {
+    margin: 20px 0 20px 10px; 
 
-.toggle-content h4:first-child {
-    margin-bottom: 15px; 
-    margin-top: 20px;
-    margin-left:20px;
 }
-.toggle-content h4:last-child {
+
+.sub-toggle-content {
+display: none;
+margin: 10px 0;
+padding: 10px;
+background: rgba(255,255,255,0.1); 
+border-radius: 5px;
+}
+
+.sub-toggle-button {
+cursor: pointer;
+margin: 15px 0 5px 0; 
+transition: all 0.2s ease;
+
+}
+
+.sub-toggle-button:hover {
+color: #ff9999; 
+}
+
+.blinkie-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.blinkie-gallery img {
+    max-width: 100px;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.preference-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-top: 20px;
-    margin-left:20px;
-    
-}   
+}
+
+.pref-btn {
+    padding: 10px;
+    cursor: pointer;
+}

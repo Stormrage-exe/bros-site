@@ -8,21 +8,105 @@
 </head>
 <body>
 
-
+    <div id="flashPreferenceModal" class="modal">
+        <div class="modal-content">
+            <h3>Flashing Content Preference</h3>
+            <p>Do you mind flashing images?</p>
+            <div class="preference-options">
+                <button class="pref-btn" data-pref="noflashing">No flashing images</button>
+                <button class="pref-btn" data-pref="both">Flashing images are OK</button>
+                <button class="pref-btn" data-pref="onlyflashing">Only flashing images</button>
+            </div>
+        </div>
+    </div>
+<!-- this script is for the window that pops up related to the flashing images -->
     <script>
-       
         document.addEventListener('DOMContentLoaded', function() {
+
+            const modal = document.getElementById('flashPreferenceModal');
+            modal.style.display = 'block';
+            
+
+            const blinkies = document.querySelectorAll('.blinkie-gallery img');
+            
+        
+            document.querySelectorAll('.pref-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const preference = this.dataset.pref;
+                   
+                    localStorage.setItem('flashPreference', preference);
+                    
+                
+                    filterBlinkies(preference);
+                    
+               
+                    modal.style.display = 'none';
+                });
+            });
+            
+   
+            const savedPref = localStorage.getItem('flashPreference');
+            if (savedPref) {
+                filterBlinkies(savedPref);
+                modal.style.display = 'none';
+            }
+            
+        
+            function filterBlinkies(preference) {
+                blinkies.forEach(blinkie => {
+                    const isFlashing = blinkie.classList.contains('flashing');
+                    
+                    switch(preference) {
+                        case 'noflashing':
+                            blinkie.style.display = isFlashing ? 'none' : 'block';
+                            break;
+                        case 'both':
+                            blinkie.style.display = 'block';
+                            break;
+                        case 'onlyflashing':
+                            blinkie.style.display = isFlashing ? 'block' : 'none';
+                            break;
+                    }
+                });
+            }
+            
+          
+            document.querySelectorAll('.sub-toggle-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+        </script>
+
+<!-- this script is to toggle the about thingies -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+     
             const toggleButton = document.querySelector('.toggle-button');
             const toggleContent = document.querySelector('.toggle-content');
-            
             
             toggleButton.addEventListener('click', function() {
                 toggleContent.style.display = toggleContent.style.display === 'none' ? 'block' : 'none';
                 toggleButton.classList.toggle('collapsed');
             });
-       
+            
+
+            const subToggles = document.querySelectorAll('.sub-toggle-button');
+            
+            subToggles.forEach(button => {
+                const content = button.nextElementSibling;
+                
+                button.addEventListener('click', function() {
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                    button.classList.toggle('sub-collapsed');
+                });
+                
+            
+            });
         });
-    </script>
+        </script>
     
     <img src="https://i.ibb.co/5hq207D2/ame-glow.png" class="fuckass">
     <img src="https://i.ibb.co/vCYs02HD/p-chan.png" class="fuckass2">
@@ -42,8 +126,24 @@
             <div class="sidebar-section">
                 <h3 class="toggle-button">About</h3>
                 <div class="toggle-content">
-                <h4>Stamps/Blinkies</h4>
-                <h4>Links</h4>
+
+                    <h4 class="sub-toggle-button">Stamps/Blinkies</h4>
+                    <div class="sub-toggle-content">
+                        <div class="blinkie-gallery">
+                            <img src="" class="flashing">
+                            <img src="" class="notflashing">
+                        </div>
+                    </div>
+
+                    <h4 class="sub-toggle-button">Links</h4>
+                    <div class="sub-toggle-content">
+                        <p>LINKS</p>
+                    </div>
+
+                    <h4 class="sub-toggle-button">Credits</h4>
+                    <div class="sub-toggle-content">
+                        <p>LINKS</p>
+                    </div>
             </div>
         </div>
             <div class="sidebar-section"></div>
