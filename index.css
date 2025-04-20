@@ -144,3 +144,39 @@ nav {
            url(https://cur.cursors-4u.net/nature/nat-10/nat1011.gif), 
            auto !important;
 }
+
+
+.toggle-button {
+    cursor: pointer;
+    color:white;
+    margin-top: 20px;
+   margin-left:10px;
+}
+
+.toggle-content {
+    display: none; 
+    color:white;
+}
+
+
+.toggle-button::after {
+    content: " ▼";
+    font-size: smaller;
+
+}
+
+.toggle-button.collapsed::after {
+    content: " ▶";
+
+}
+
+.toggle-content h4:first-child {
+    margin-bottom: 15px; 
+    margin-top: 20px;
+    margin-left:20px;
+}
+.toggle-content h4:last-child {
+    margin-top: 20px;
+    margin-left:20px;
+    
+}   
