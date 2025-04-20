@@ -5,15 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
-@viewport {
-    width: device-width;
-    zoom: 1;
-    min-zoom: 1;
-    max-zoom: 1;
-    user-zoom: fixed;
-}
-
-html {
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    min-width: 1100px;
     overflow-x: auto;
 }
 
@@ -22,17 +17,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    min-width: 1100px;
     padding: 1.25rem;
     position: relative;
+    background-repeat: repeat; /* CHANGED: Makes background repeat */
+    background-attachment: fixed;
+    background-size: auto; /* CHANGED: Allows repeating */
 }
 
 .wrapper {
     width: 1100px;
+    min-width: 1100px;
     display: flex;
     gap: 1.25rem;
     flex-shrink: 0;
+    margin-left: 230px;
 }
 
 .center-content {
@@ -63,6 +61,7 @@ nav {
     border-radius: 0 0 0.625rem 0.625rem;
     box-shadow: 0 0 1.25rem rgba(0,0,0,0.1);
     border: 0.125rem solid #DC70A6;
+    overflow: hidden;
 }
 
 .right-sidebar {
@@ -89,18 +88,19 @@ nav {
 }
 
 .fuckass { 
-    padding-right: -1.25rem;
-    margin-left: -14.375rem;
+    position: absolute;
+    margin-left: -1300px;
     width: 28.75rem;
     height: 52.5rem;
+    z-index: 1;
 }
 
 .fuckass2 {
-    width: 12.5rem;
-    height: 12.5rem;
     position: absolute;
-    right: 15.625rem;
-    top: 45.625rem;
+    margin-left: 1200px;
+    margin-top:700px;
+    width: 11.75rem;
+    height: 12.5rem;
     z-index: 2;
 }
 
