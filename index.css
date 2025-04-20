@@ -192,19 +192,36 @@ transition: all 0.2s ease;
 .sub-toggle-button:hover {
 color: #ff9999; 
 }
+.blinkie-container {
+    max-height: 150px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px; 
+   
+}
 
 .blinkie-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
     justify-content: center;
+    width: calc(100% - 8px); 
+    padding-right: 8px; 
 }
 
 .blinkie-gallery img {
-    max-width: 100px;
-    max-height: 50px;
+    width: 150px;
+    height: 65px;
     object-fit: contain;
+    display: block;
 }
+
+
+
 
 
 .modal {
