@@ -19,9 +19,9 @@ body {
     align-items: center;
     padding: 1.25rem;
     position: relative;
-    background-repeat: repeat; /* CHANGED: Makes background repeat */
+    background-repeat: repeat;
     background-attachment: fixed;
-    background-size: auto; /* CHANGED: Allows repeating */
+    background-size: auto; 
 }
 
 .wrapper {
