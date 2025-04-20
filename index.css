@@ -103,7 +103,38 @@ nav {
     height: 12.5rem;
     z-index: 2;
 }
-
+.fuckass3 {
+    position: absolute;
+    margin-left: -880px;
+    margin-top:680px;
+    width: 5.75rem;
+    height: 10.5rem;
+    z-index: 2;
+}
+.fuckass4 {
+    position: absolute;
+    margin-left: 590px;
+    margin-top:720px;
+    width: 7.75rem;
+    height: 7.5rem;
+    z-index: 2;
+}
+.fuckass5 {
+    position: absolute;
+    margin-left: 350px;
+    margin-top:720px;
+    width: 7.75rem;
+    height: 7.5rem;
+    z-index: 2;
+}
+.fuckass6 {
+    position: absolute;
+    margin-left: 100px;
+    margin-top:720px;
+    width: 7.75rem;
+    height: 7.5rem;
+    z-index: 2;
+}
 .sidebar-section:hover {
     transform: scale(1.02);
 }
