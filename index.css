@@ -97,11 +97,12 @@ nav {
 
 .fuckass2 {
     position: absolute;
-    margin-left: 1150px;
-    margin-top:740px;
+    margin-left: 1140px;
+    margin-top:760px;
     width: 11.75rem;
     height: 12.5rem;
-    z-index: 2;
+    z-index: 3;
+    pointer-events: none !important;
 }
 .fuckass3 {
     position: absolute;
@@ -296,3 +297,4 @@ color: #ff9999;
     width:37px;
     height:40px;
 }
+
