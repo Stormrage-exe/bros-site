@@ -148,38 +148,65 @@ nav {
 
 .toggle-button {
     cursor: pointer;
-    color:white;
+    color: white;
     margin-top: 20px;
-   margin-left:10px;
+    margin-left: 10px;
+    position: relative;
+    padding-right: 20px;
+    user-select: none;
 }
-
-.toggle-content {
-    display: none; 
-    color:white;
-}
-
 
 .toggle-button::after {
     content: " ▼";
+    position: absolute;
+    right: 0;
     font-size: smaller;
-
+    transition: transform 0.2s;
 }
 
 .toggle-button.collapsed::after {
     content: " ▶";
-
 }
-.toggle-content h4 {
-    margin: 20px 0 20px 10px; 
 
+.toggle-content {
+    display: none;
+    color: white;
+    padding: 0 10px 10px;
+}
+
+.toggle-content.active {
+    display: block;
+}
+
+.sub-toggle-button {
+    cursor: pointer;
+    margin: 15px 0 5px 0;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-right: 20px;
+}
+
+.sub-toggle-button::after {
+    content: " ▼";
+    position: absolute;
+    right: 0;
+    font-size: smaller;
+}
+
+.sub-toggle-button.collapsed::after {
+    content: " ▶";
 }
 
 .sub-toggle-content {
-display: none;
-margin: 10px 0;
-padding: 10px;
-background: rgba(255,255,255,0.1); 
-border-radius: 5px;
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+.sub-toggle-content.active {
+    display: block;
 }
 
 .sub-toggle-button {
@@ -203,6 +230,15 @@ color: #ff9999;
     box-sizing: border-box;
     padding: 5px; 
    
+}
+
+.sub-toggle-button::after {
+    content: " ▼";
+    font-size: smaller;
+}
+
+.sub-toggle-button.sub-collapsed::after {
+    content: " ▶";
 }
 
 .blinkie-gallery {
