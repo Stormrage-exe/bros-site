@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bros Site</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.javascript"></script>
 </head>
 <body>
 
@@ -19,95 +20,7 @@
             </div>
         </div>
     </div>
-<!-- this script is for the window that pops up related to the flashing images -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
 
-            const modal = document.getElementById('flashPreferenceModal');
-            modal.style.display = 'block';
-            
-
-            const blinkies = document.querySelectorAll('.blinkie-gallery img');
-            
-        
-            document.querySelectorAll('.pref-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const preference = this.dataset.pref;
-                   
-                    localStorage.setItem('flashPreference', preference);
-                    
-                
-                    filterBlinkies(preference);
-                    
-               
-                    modal.style.display = 'none';
-                });
-            });
-            
-   
-            const savedPref = localStorage.getItem('flashPreference');
-            if (savedPref) {
-                filterBlinkies(savedPref);
-                modal.style.display = 'none';
-            }
-            
-        
-            function filterBlinkies(preference) {
-                blinkies.forEach(blinkie => {
-                    const isFlashing = blinkie.classList.contains('flashing');
-                    
-                    switch(preference) {
-                        case 'noflashing':
-                            blinkie.style.display = isFlashing ? 'none' : 'block';
-                            break;
-                        case 'both':
-                            blinkie.style.display = 'block';
-                            break;
-                        case 'onlyflashing':
-                            blinkie.style.display = isFlashing ? 'block' : 'none';
-                            break;
-                    }
-                });
-            }
-            
-          
-            document.querySelectorAll('.sub-toggle-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                });
-            });
-        });
-        </script>
-
-<!-- this script is to toggle the about thingies -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-     
-            const toggleButton = document.querySelector('.toggle-button');
-            const toggleContent = document.querySelector('.toggle-content');
-            
-            toggleButton.addEventListener('click', function() {
-                toggleContent.style.display = toggleContent.style.display === 'none' ? 'block' : 'none';
-                toggleButton.classList.toggle('collapsed');
-            });
-            
-
-            const subToggles = document.querySelectorAll('.sub-toggle-button');
-            
-            subToggles.forEach(button => {
-                const content = button.nextElementSibling;
-                
-                button.addEventListener('click', function() {
-                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                    button.classList.toggle('sub-collapsed');
-                });
-                
-            
-            });
-        });
-        </script>
-    
     <img src="https://i.ibb.co/5hq207D2/ame-glow.png" class="fuckass">
     <img src="https://i.ibb.co/vCYs02HD/p-chan.png" class="fuckass2">
     <img src="https://i.ibb.co/zhKqV8Qp/p-chan-parenthesis.png" class="fuckass3">
@@ -246,11 +159,11 @@
                             <img src="https://i.ibb.co/6cBn86hv/silly.gif" class="notflashing">
                             <img src="https://i.ibb.co/BV0906xz/ezgif-2-5a492c3817.gif" class="flashing">
                             <img src="https://i.ibb.co/RG8hXJL6/ezgif-2-29072d0d49.gif" class="flashing">
-                            <img src="" class="notflashing">
-                            <img src="" class="notflashing">
-                            <img src="" class="notflashing">
-                            <img src="" class="notflashing">
-                            <img src="" class="notflashing">
+                            <img src="https://i.ibb.co/vC0jb8c9/0028-computer.gif" class="flashing">
+                            <img src="https://i.ibb.co/mrbDMHgx/0092-computerconnect.gif" class="flashing">
+                            <img src="https://i.ibb.co/Ndcvmj8Q/0210-werewolfmoonhowl.gif" class="flashing">
+                            <img src="https://i.ibb.co/FLgh9myK/stillyou.gif" class="flashing">
+                            <img src="https://i.ibb.co/BHDtm2wg/z35.gif" class="flashing">
                             <img src="" class="notflashing">
                             <img src="" class="notflashing">
                             <img src="" class="notflashing">
