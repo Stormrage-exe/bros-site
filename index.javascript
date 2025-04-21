@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
+
     const modal = document.getElementById('flashPreferenceModal');
     modal.style.display = 'block';
     
@@ -38,9 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Main toggle button
+   
     const toggleButton = document.querySelector('.toggle-button');
     const toggleContent = document.querySelector('.toggle-content');
+    
+    // Initialize with About section open
+    toggleContent.style.display = 'block';
+    toggleButton.classList.remove('collapsed');
     
 
     document.querySelectorAll('.sub-toggle-content').forEach(content => {
@@ -51,16 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
         button.classList.add('sub-collapsed');
     });
     
+   
     toggleButton.addEventListener('click', function() {
         const isHidden = toggleContent.style.display === 'none';
         toggleContent.style.display = isHidden ? 'block' : 'none';
         this.classList.toggle('collapsed');
     });
     
-    // Sub-toggle buttons
+    // Sub-toggle buttons 
     document.querySelectorAll('.sub-toggle-button').forEach(button => {
         button.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent event from bubbling to parent
+            e.stopPropagation();
             const content = this.nextElementSibling;
             const isHidden = content.style.display === 'none';
             content.style.display = isHidden ? 'block' : 'none';
