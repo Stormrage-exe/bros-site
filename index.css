@@ -298,3 +298,116 @@ color: #ff9999;
     height:40px;
 }
 
+  
+        .blog-container {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(220, 112, 166, 0.5);
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #DC70A6;
+        }
+        
+        .blog-header h1 {
+            color: #DC70A6;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .blog-header p {
+            color: #000000;
+            font-size: 16px;
+        }
+        
+        .blog-content {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .blog-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .blog-content::-webkit-scrollbar-track {
+            border-radius: 4px;
+        }
+        
+        .blog-content::-webkit-scrollbar-thumb {
+            background: #DC70A6;
+            border-radius: 4px;
+        }
+        
+        .blog-post {
+            background-color: #ffd0e7;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #DC70A6;
+        }
+        
+        .blog-post:last-child {
+            margin-bottom: 0;
+        }
+        
+        .post-date {
+            color: #DC70A6;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .post-title {
+            color: #000000;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .post-content {
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        .post-content p {
+            margin-bottom: 10px;
+        }
+        
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .tag {
+            background-color: #DC70A6;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .tag:hover {
+            background-color: #ee9ae0;
+            transform: translateY(-2px);
+        }
+        
+        .tag.active {
+            background-color: #ee9ae0;
+            box-shadow: 0 0 10px #e733c9;
+        }

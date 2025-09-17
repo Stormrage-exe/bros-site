@@ -30,9 +30,64 @@
     <div class="wrapper">
         <div class="center-content">
             <nav>
-                <div class="logo">random shit to be added here.</div>
+                <div class="logo">MY BLOG</div>
             </nav>
-            <main class="main-content"></main>
+            <main class="main-content">
+
+
+ <div class="blog-container">
+        <div class="blog-header">
+            
+        </div>
+        
+  <div class="tag-filter">
+            <div class="tag active" data-tag="all">All Posts</div>
+            <div class="tag" data-tag="cat">cat</div>
+            <div class="tag" data-tag="meow">meow</div>
+        </div>
+
+        <div class="blog-content">
+
+            <div class="blog-post">
+                <div class="post-date">17.9.25</div>
+                <h2 class="post-title">I'm a cat</h2>
+                <div class="post-content">
+                    <p>meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow </p>
+                <div class="post-tags">
+                   
+                    <span class="tag">meow</span>
+                </div>
+            </div>
+          </div>
+
+   <div class="blog-post">
+                <div class="post-date">17.9.25</div>
+                <h2 class="post-title">I'm a cat</h2>
+                <div class="post-content">
+                    <p>meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow </p>
+                <div class="post-tags">
+                    <span class="tag">cat</span>
+                </div>
+            </div>
+          </div>
+
+             <div class="blog-post">
+                <div class="post-date">17.9.25</div>
+                <h2 class="post-title">I'm a cat</h2>
+                <div class="post-content">
+                    <p>meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow </p>
+                <div class="post-tags">
+                  <span class="tag">cat</span>
+                    <span class="tag">meow</span>
+                </div>
+            </div>
+          </div>
+
+    </div>
+
+
+
+            </main>
         </div>
         
         <aside class="right-sidebar">
@@ -281,5 +336,59 @@
             </div>
         </aside>
     </div>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTags = document.querySelectorAll('.tag-filter .tag');
+            const blogPosts = document.querySelectorAll('.blog-post');
+            const noPostsMessage = document.getElementById('noPostsMessage');
+            
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+            
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+                    const selectedTag = this.getAttribute('data-tag');
+                    
+                    if (selectedTag === 'all') {
+                        blogPosts.forEach(post => {
+                            post.style.display = 'block';
+                        });
+                        noPostsMessage.style.display = 'none';
+                        return;
+                    }
+                    
+                    let visiblePosts = 0;
+                    
+                    blogPosts.forEach(post => {
+                        const postTags = post.querySelectorAll('.post-tags .tag');
+                        let hasTag = false;
+                        
+                        postTags.forEach(postTag => {
+                            if (postTag.textContent.toLowerCase() === selectedTag.toLowerCase()) {
+                                hasTag = true;
+                            }
+                        });
+                        
+                        if (hasTag) {
+                            post.style.display = 'block';
+                            visiblePosts++;
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+        
+                    if (visiblePosts === 0) {
+                        noPostsMessage.style.display = 'block';
+                    } else {
+                        noPostsMessage.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
