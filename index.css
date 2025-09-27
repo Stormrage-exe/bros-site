@@ -432,11 +432,17 @@ color: #ff9999;
     body {
         --scale-factor: 0.8;
     }
+    .fuckass {
+        margin-left: -1100px; 
+    }
 }
 
 @media (max-width: 1300px) {
     body {
         --scale-factor: 0.7;
+    }
+    .fuckass {
+        margin-left: -1000px;
     }
 }
 
@@ -444,11 +450,17 @@ color: #ff9999;
     body {
         --scale-factor: 0.6;
     }
+    .fuckass {
+        margin-left: -900px;
+    }
 }
 
 @media (max-width: 900px) {
     body {
         --scale-factor: 0.5;
+    }
+    .fuckass {
+        margin-left: -800px;
     }
 }
 
@@ -456,10 +468,16 @@ color: #ff9999;
     body {
         --scale-factor: 0.4;
     }
+    .fuckass {
+        margin-left: -700px;
+    }
 }
 
 @media (max-width: 500px) {
     body {
         --scale-factor: 0.35;
+    }
+    .fuckass {
+        margin-left: -600px;
     }
 }
